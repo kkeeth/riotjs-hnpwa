@@ -30,6 +30,7 @@
     "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-progress": "^0.4.0",
-    "rollup-plugin-riot": "^2.0.0"
+    "rollup-plugin-riot": "^2.0.0",
+    "rollup-plugin-sass": "^0.6.1"
   }
 }
