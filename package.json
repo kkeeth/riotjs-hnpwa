@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/yumemi-kuwahara/riotjs-hnpwa#readme",
   "dependencies": {
+    "firebase": "^5.1.0",
     "riot": "^3.9.3",
     "riot-route": "^3.1.3"
   },

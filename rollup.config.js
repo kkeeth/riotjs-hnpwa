@@ -1,4 +1,4 @@
-import {rollup} from 'rollup'
+import rollup      from 'rollup'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import progress from 'rollup-plugin-progress'
 import commonjs from 'rollup-plugin-commonjs'
@@ -7,11 +7,12 @@ import buble from 'rollup-plugin-buble'
 import riot from 'rollup-plugin-riot'
 
 export default {
-   input: 'src/app.js',
+   input: 'src/js/app.js',
    output: {
       file: 'public/js/app.js',
-      sourcemap: false,
       format: 'iife',
+      name: 'riothn',
+      sourceMMap: false,
       strict: true
    },
    context: 'window',
