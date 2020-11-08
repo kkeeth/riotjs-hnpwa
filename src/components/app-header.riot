@@ -1,21 +1,23 @@
 <app-header>
   <nav>
     <a href="/" class="logo"><img src="src/img/logo.png" alt="logo"></a>
-    <a each={ navItems } href="{ link }">{ name }</a>
+    <a each={ item in navItems } href={ item.link }>{ item.name }</a>
   </nav>
 
   <script>
-    this.navItems = [
-      { link: '/', name: 'Top' },
-      { link: '/new',  name: 'News' },
-      { link: '/show', name: 'Show' },
-      { link: '/ask',  name: 'Ask'  },
-      { link: '/jobs', name: 'Jobs' },
-    ]
+    export default {
+      navItems: [
+        { link: '/', name: 'Top' },
+        { link: '/new',  name: 'News' },
+        { link: '/show', name: 'Show' },
+        { link: '/ask',  name: 'Ask'  },
+        { link: '/jobs', name: 'Jobs' },
+      ]
+    }
   </script>
 
-  <style type="text/scss">
-    app-header {
+  <style type="scss">
+    :host {
         background-color: #FF0044;
         font-family: Josefin Sans;
         height: 50px;

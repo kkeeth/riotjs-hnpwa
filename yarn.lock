@@ -2,22 +2,6 @@
 # yarn lockfile v1
 
 
-"@riotjs/compiler@^4.11.0":
-  version "4.11.0"
-  resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.11.0.tgz#54b8b05f1878b04ba67c97832e6d81a5e2018b03"
-  integrity sha512-/4BTQ9vh5nTxnx0U1oXbCG0b+R6fMn7EUb6itP61DUz0Pr0c2BFYJo//NEQ4gE9Oe28UIsY4Swrv6qn81LKd4w==
-  dependencies:
-    "@riotjs/parser" "^4.3.1"
-    "@riotjs/util" "1.3.1"
-    acorn "^8.0.1"
-    cssesc "^3.0.0"
-    cumpa "^1.0.1"
-    curri "^1.0.1"
-    dom-nodes "^1.1.3"
-    globals "^13.2.0"
-    recast "^0.20.3"
-    source-map "^0.7.3"
-
 "@riotjs/compiler@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-5.0.0.tgz#e0fcbb2e5adf62b7a976e4c1c6bb033e0b472e1e"
@@ -34,13 +18,19 @@
     recast "^0.20.4"
     source-map "^0.7.3"
 
-"@riotjs/dom-bindings@^4.8.3":
-  version "4.8.3"
-  resolved "https://registry.yarnpkg.com/@riotjs/dom-bindings/-/dom-bindings-4.8.3.tgz#39f889d3cd1b473c67ba6c7452b0d9f994c4ab0a"
-  integrity sha512-Zry505HpjJy12+psla81a948hJKpJ16uZ74ylW6rmmMubiva8XfX/1rFMrddPzBrOpCrA2UwUWmkZRR+MqqKXQ==
+"@riotjs/dom-bindings@5.0.0-alpha.2":
+  version "5.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@riotjs/dom-bindings/-/dom-bindings-5.0.0-alpha.2.tgz#578dc592ecf68b0fe57402f1ec139b1db160e983"
+  integrity sha512-vvRIb6YchsnDOiO5kV1mppfttUhduf/oGDjfVPzdPbU5hRhf+tRktjIVLb2rO+b3J8v3oGqATLFAaQ3p0BdbPg==
   dependencies:
-    "@riotjs/util" "^1.3.1"
-    domdiff "^2.2.2"
+    "@riotjs/util" "^2.0.0"
+
+"@riotjs/hot-reload@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@riotjs/hot-reload/-/hot-reload-4.0.1.tgz#e249eb2523b706eaacf8cc39d350ebcb2b34f783"
+  integrity sha512-7kzPKd+L/wBXS+4+myxAx0ZLTUks4Piw+aCZyGvMVE3PRniJQdJ0u8qRFUijtVJ6mgbL7DSGLx6C+1ZiMu7XaA==
+  dependencies:
+    bianco.query "^1.0.0"
 
 "@riotjs/parser@^4.3.1":
   version "4.3.1"
@@ -61,15 +51,15 @@
     cumpa "^1.0.1"
     rawth "^2.0.1"
 
-"@riotjs/util@1.3.1", "@riotjs/util@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@riotjs/util/-/util-1.3.1.tgz#3cc24081145f0c650fffc52b051a13ff2d19677e"
-  integrity sha512-8MhO7mVyRGDY/oaH6X+Q6DCrtu9zWrLOySBA8S3Qe5AGyVInpCwvjiAWGKqNbz5r6GWm08/S9yN/hCdB3mTLWw==
-
-"@riotjs/util@2.0.0":
+"@riotjs/util@2.0.0", "@riotjs/util@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@riotjs/util/-/util-2.0.0.tgz#86617f7bad035c87724ca3a29dfc87fd6f2a0760"
   integrity sha512-+FtbujwoRT/Gi2/tarL0I30GIBCFFLUGtuhEJbosT09cUcP839oML871Yc7w5Zxb/IHFV1GS0p1ZGWe3JeeEjw==
+
+"@riotjs/util@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@riotjs/util/-/util-1.3.1.tgz#3cc24081145f0c650fffc52b051a13ff2d19677e"
+  integrity sha512-8MhO7mVyRGDY/oaH6X+Q6DCrtu9zWrLOySBA8S3Qe5AGyVInpCwvjiAWGKqNbz5r6GWm08/S9yN/hCdB3mTLWw==
 
 "@rollup/plugin-commonjs@^16.0.0":
   version "16.0.0"
@@ -84,6 +74,13 @@
     magic-string "^0.25.7"
     resolve "^1.17.0"
 
+"@rollup/plugin-json@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-json/-/plugin-json-4.1.0.tgz#54e09867ae6963c593844d8bd7a9c718294496f3"
+  integrity sha512-yfLbTdNS6amI/2OpmbiBoW12vngr5NW2jCJVZSBEz+H5KfUJZ2M7sDjk0U6GOOdCWFVScShte29o9NezJ53TPw==
+  dependencies:
+    "@rollup/pluginutils" "^3.0.8"
+
 "@rollup/plugin-node-resolve@^10.0.0":
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-10.0.0.tgz#44064a2b98df7530e66acf8941ff262fc9b4ead8"
@@ -96,7 +93,7 @@
     is-module "^1.0.0"
     resolve "^1.17.0"
 
-"@rollup/pluginutils@^3.1.0":
+"@rollup/pluginutils@^3.0.8", "@rollup/pluginutils@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-3.1.0.tgz#706b4524ee6dc8b103b3c995533e5ad680c02b9b"
   integrity sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==
@@ -140,7 +137,7 @@ accepts@~1.3.4:
     mime-types "~2.1.24"
     negotiator "0.6.2"
 
-acorn@^8.0.1, acorn@^8.0.4:
+acorn@^8.0.4:
   version "8.0.4"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.0.4.tgz#7a3ae4191466a6984eee0fe3407a4f3aa9db8354"
   integrity sha512-XNP0PqF1XD19ZlLKvB7cMmnZswW4C/03pRHgirB30uSJTaS3A3V1/P4sS3HPvFmjoriPCJQs+JDSbm4bL1TxGQ==
@@ -961,13 +958,6 @@ dom-nodes@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/dom-nodes/-/dom-nodes-1.1.3.tgz#608d569eafacadef857f09505123efd10a566030"
   integrity sha512-y5wnIx97oe0IqMllL/lizgkK2c9vu1cQeqPCCsS7mwNdPuYxg3b04eDJynHhC63kM8+ZsteOmiPElfVGOUmmKg==
-
-domdiff@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/domdiff/-/domdiff-2.2.2.tgz#b05ea5e6084b5e659369d1c022e4e3d6fb31398d"
-  integrity sha512-Pv7aH5JfjNIkLRKkah+T3Kd41Gy+7GU+5dmPsOZZXsCJ34QR1i7CCiWraUn1c/a40htShxAQ8mHJR2OqPd12+Q==
-  dependencies:
-    uarray "^1.0.0"
 
 easy-extender@^2.3.4:
   version "2.3.4"
@@ -2191,7 +2181,7 @@ node-gyp@^7.1.0:
     tar "^6.0.2"
     which "^2.0.2"
 
-"node-sass@>= 3.8.0":
+"node-sass@>= 3.8.0", node-sass@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-5.0.0.tgz#4e8f39fbef3bac8d2dc72ebe3b539711883a78d2"
   integrity sha512-opNgmlu83ZCF792U281Ry7tak9IbVC+AKnXGovcQ8LG8wFaJv6cLnRlc6DIHlmNxWEexB5bZxi9SZ9JyUuOYjw==
@@ -2479,6 +2469,11 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
+prettier@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
+  integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
+
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
@@ -2573,7 +2568,7 @@ readdirp@~3.5.0:
   dependencies:
     picomatch "^2.2.1"
 
-recast@^0.20.3, recast@^0.20.4:
+recast@^0.20.4:
   version "0.20.4"
   resolved "https://registry.yarnpkg.com/recast/-/recast-0.20.4.tgz#db55983eac70c46b3fff96c8e467d65ffb4a7abc"
   integrity sha512-6qLIBGGRcwjrTZGIiBpJVC/NeuXpogXNyRQpqU1zWPUigCphvApoCs9KIwDYh1eDuJ6dAFlQoi/QUyE5KQ6RBQ==
@@ -2707,14 +2702,14 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-riot@4.14.0:
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/riot/-/riot-4.14.0.tgz#87bf224a6483c028a954e6c0397189adff6a0fb4"
-  integrity sha512-0qZgOZbcYa2IpDhh1u7aCBnL1CnnxUI1IaXrzuuKOOLAn+VK5Rd4yID5SraCHy38j+LzJBLDYFXdrUc56mJSrQ==
+riot@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/riot/-/riot-5.0.0.tgz#f83fa50f34c7520384496b8fd77d56a16c1c404c"
+  integrity sha512-PO+z7YB4jhjEz/Z1wmou8KCBL+LNZttW5WOvf14ZWSoH0s1Rv46HzCEMxEWbUdQhSlYSNYhAyb/Z+tso5tkjsQ==
   dependencies:
-    "@riotjs/compiler" "^4.11.0"
-    "@riotjs/dom-bindings" "^4.8.3"
-    "@riotjs/util" "^1.3.1"
+    "@riotjs/compiler" "^5.0.0"
+    "@riotjs/dom-bindings" "5.0.0-alpha.2"
+    "@riotjs/util" "^2.0.0"
     bianco.attr "^1.0.0"
     bianco.query "^1.0.0"
     cumpa "^1.0.1"
@@ -3366,11 +3361,6 @@ ua-parser-js@^0.7.18:
   version "0.7.22"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.22.tgz#960df60a5f911ea8f1c818f3747b99c6e177eae3"
   integrity sha512-YUxzMjJ5T71w6a8WWVcMGM6YWOTX27rCoIQgLXiWaxqXSx9D7DNjiGWn1aJIRSQ5qr0xuhra77bSIh6voR/46Q==
-
-uarray@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/uarray/-/uarray-1.0.0.tgz#e89bf0ea2129596f4bf653b66e53246ed6562b6c"
-  integrity sha512-LHmiAd5QuAv7pU2vbh+Zq9YOnqVK0H764p2Ozinpfy9ka58OID4IsGLiXsitqH7n0NAIDxvax1A/kDXpii/Ckg==
 
 ultron@~1.1.0:
   version "1.1.1"

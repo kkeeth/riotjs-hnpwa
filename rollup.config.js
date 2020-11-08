@@ -3,6 +3,7 @@ import progress from 'rollup-plugin-progress'
 import commonjs from '@rollup/plugin-commonjs'
 import prettier from 'rollup-plugin-prettier'
 import riot from 'rollup-plugin-riot'
+import './src/preProcessor'
 
 export default {
    input: 'src/app.js',
