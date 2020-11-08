@@ -1,8 +1,7 @@
-import nodeResolve from 'rollup-plugin-node-resolve'
+import nodeResolve from '@rollup/plugin-node-resolve'
 import progress from 'rollup-plugin-progress'
-import commonjs from 'rollup-plugin-commonjs'
+import commonjs from '@rollup/plugin-commonjs'
 import prettier from 'rollup-plugin-prettier'
-import buble from 'rollup-plugin-buble'
 import riot from 'rollup-plugin-riot'
 
 export default {
@@ -23,7 +22,6 @@ export default {
       }),
       commonjs(),
       prettier(),
-      buble(),
       progress()
    ]
 }

@@ -1,0 +1,22 @@
+<app>
+  <app-header />
+  <app-main />
+
+  <script>
+    import AppHeader from './app-header.riot'
+    import AppMain from './app-main.riot'
+
+    export default {
+      components: {
+        AppHeader,
+        AppMain
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+        background-color: #eee;
+    }
+  </style>
+</app>

@@ -1,5 +1,5 @@
-import riot from 'riot'
+import { component } from 'riot'
 import route from './routes.js'
-import './tags/app.tag'
+import App from './components/app.riot'
 
-riot.mount('app')
+component(App)(document.getElementsById('app'))

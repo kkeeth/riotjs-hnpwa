@@ -1,4 +1,4 @@
-import route from 'riot-route'
+import route from '@riotjs/route'
 
 export default {
 }
