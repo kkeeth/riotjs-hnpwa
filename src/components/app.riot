@@ -1,6 +1,8 @@
 <app>
-  <app-header />
-  <app-main />
+  <router base={ base }>
+    <app-header />
+    <app-main />
+  </router>
 
   <script>
     import AppHeader from './app-header.riot'
@@ -10,7 +12,8 @@
       components: {
         AppHeader,
         AppMain
-      }
+      },
+      base: window.location.origin
     }
   </script>
 

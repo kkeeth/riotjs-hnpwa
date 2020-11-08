@@ -1,15 +1,31 @@
-import './routes/top.tag'
-import './routes/news.tag'
-import './routes/show.tag'
-import './routes/ask.tag'
-import './routes/jobs.tag'
-
 <app-main>
-  <router>
-    <route path="/"><top /><route>
-    <route path="news"><news /></route>
-    <route path="show"><show /><route>
-    <route path="ask"><ask /><route>
-    <route path="jobs"><jobs /><route>
-  </router>
+  <route path="/"><top /><route>
+  <route path="news"><news /></route>
+  <route path="show"><show /><route>
+  <route path="ask"><ask /><route>
+  <route path="jobs"><jobs /><route>
+  <route path="(.*)">{ onRoute(route) }</route>
+
+  <script>
+    import Ask from './routes/ask.riot'
+    import Jobs from './routes/jobs.riot'
+    import News from './routes/news.riot'
+    import Show from './routes/show.riot'
+    import Top from './routes/top.riot'
+
+    export default {
+      components: {
+        Ask,
+        Jobs,
+        News,
+        Show,
+        Top
+      },
+      onRoute(route) {
+        console.log(route)
+        // const page = pages.find(page => page === route.pathname)
+        // if (page === void 0) router.push("/404")
+      }
+    }
+  </script>
 </app-main>
