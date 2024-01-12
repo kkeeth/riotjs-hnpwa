@@ -2,12 +2,13 @@
   "name": "riotjs-hnpwa",
   "version": "0.0.0",
   "description": "## 🚧 This repo is WIP 🚧",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "npm run watch & npm run server",
-    "build": "rollup -c",
-    "watch": "chokidar 'src/**' -c 'npm run build'",
-    "server": "browser-sync start --files 'public/*, index.html' --server"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -15,32 +16,25 @@
   },
   "keywords": [
     "riotjs",
-    "Hacker News"
+    "Hacker News",
+    "vite"
   ],
-  "author": "k-kuwahara",
+  "author": "kkeeth",
   "license": " MIT",
   "bugs": {
     "url": "https://github.com/kkeeth/riotjs-hnpwa/issues"
   },
   "homepage": "https://github.com/kkeeth/riotjs-hnpwa#readme",
   "dependencies": {
-    "@riotjs/route": "^6.0.2",
-    "riot": "^5.0.0"
+    "@riotjs/route": "^8.0.2",
+    "riot": "^9.1.1"
   },
   "devDependencies": {
-    "@riotjs/compiler": "^5.0.0",
-    "@riotjs/hot-reload": "^4.0.1",
-    "@rollup/plugin-commonjs": "^16.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^10.0.0",
-    "browser-sync": "^2.23.7",
-    "chokidar-cli": "^1.2.0",
-    "node-sass": "^5.0.0",
-    "prettier": "^2.1.2",
-    "rollup": "^2.33.1",
-    "rollup-plugin-prettier": "^2.1.0",
-    "rollup-plugin-progress": "^1.1.2",
-    "rollup-plugin-riot": "^4.0.2",
-    "rollup-plugin-sass": "^0.6.1"
+    "@riotjs/compiler": "^9.0.6",
+    "@riotjs/hot-reload": "^9.0.1",
+    "@riotjs/lazy": "^9.0.0",
+    "rollup": "^4.4.1",
+    "rollup-plugin-riot": "^9.0.2",
+    "vite": "^5.0.0"
   }
 }
