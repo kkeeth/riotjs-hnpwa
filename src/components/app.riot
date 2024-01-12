@@ -5,13 +5,17 @@
   </router>
 
   <script>
-    import AppHeader from './app-header.riot'
-    import AppMain from './app-main.riot'
+    import lazy from '@riotjs/lazy'
+    import Loader from './includes/loader/loader.riot'
 
     export default {
       components: {
-        AppHeader,
-        AppMain
+        AppHeader: lazy(Loader, () => import(
+          './app-header.riot'
+        )),
+        AppMain: lazy(Loader, () => import(
+          './app-Main.riot'
+        )),
       },
       base: window.location.origin
     }

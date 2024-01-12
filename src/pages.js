@@ -1,9 +1,7 @@
-export default [{
-  path: '/',
-  label: 'Home',
-  componentName: 'home'
-}, {
-  path: '/about',
-  label: 'About',
-  componentName: 'about'
-}]
+export default [
+  { link: "/", label: "Top", componentName: "top" },
+  { link: "/new", label: "News", componentName: "news" },
+  { link: "/show", label: "Show", componentName: "show" },
+  { link: "/ask", label: "Ask", componentName: "ask" },
+  { link: "/jobs", label: "Jobs", componentName: "jobs" },
+];

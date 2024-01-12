@@ -1,17 +1,8 @@
 <app>
   <div class="container">
-    <router>
+    <router base={ base }>
       <h1> Riotjs + ViteJS </h1>
-      <div class="row">
-        <nav class="menu column">
-          <a
-            each={page in state.pages}
-            class={state.activePage === page ? 'active' : '' }
-            href={page.path}>
-            {page.label}
-          </a>
-        </nav>
-      </div>
+      <AppHeader />
       <div if={state.showNotFound} class="row">
         <div class="column column-60">
           <not-found />
@@ -38,12 +29,13 @@
         Router,
         Route,
         NotFound,
-        Home: lazy(Loader, () => import(
-          './pages/home.riot'
+        AppHeader: lazy(Loader, () => import(
+          './app-header.riot'
         )),
-        About: lazy(Loader, () => import(
-          './pages/about.riot'
+        AppMain: lazy(Loader, () => import(
+          './app-Main.riot'
         )),
+        base: window.location.origin,
       },
       state: {
         pages,

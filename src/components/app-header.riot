@@ -3,20 +3,23 @@
     <a href="/" class="logo"><img src="src/img/logo.png" alt="logo"></a>
     <a each={ item in navItems } href={ item.link }>{ item.name }</a>
   </nav>
-
+  <div class="row">
+    <nav class="menu column">
+      <a
+        each={page in state.pages}
+        class={state.activePage === page ? 'active' : '' }
+        href={page.path}>
+        {page.label}
+      </a>
+    </nav>
+  </div>
   <script>
+    import navItems from './pages'
     export default {
-      navItems: [
-        { link: '/', name: 'Top' },
-        { link: '/new',  name: 'News' },
-        { link: '/show', name: 'Show' },
-        { link: '/ask',  name: 'Ask'  },
-        { link: '/jobs', name: 'Jobs' },
-      ]
     }
   </script>
 
-  <style type="scss">
+  <style>
     :host {
         background-color: #FF0044;
         font-family: Josefin Sans;
@@ -25,11 +28,10 @@
         display: block;
         position: -webkit-sticky;
         position: sticky;
-
-        a {
-            color: #FFF;
-            margin-right: 6px;
-        }
     }
+      a {
+          color: #FFF;
+          margin-right: 6px;
+      }
   </style>
 </app-header>
