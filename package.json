@@ -27,14 +27,14 @@
   "homepage": "https://github.com/kkeeth/riotjs-hnpwa#readme",
   "dependencies": {
     "@riotjs/route": "^8.0.2",
-    "riot": "^9.1.1"
+    "riot": "^9.4.0"
   },
   "devDependencies": {
-    "@riotjs/compiler": "^9.0.6",
+    "@riotjs/compiler": "^9.2.0",
     "@riotjs/hot-reload": "^9.0.1",
     "@riotjs/lazy": "^9.0.0",
-    "rollup": "^4.4.1",
+    "rollup": "^4.21.3",
     "rollup-plugin-riot": "^9.0.2",
-    "vite": "^5.0.0"
+    "vite": "^5.4.6"
   }
 }
