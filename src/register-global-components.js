@@ -2,13 +2,13 @@ import { register } from "riot";
 
 const basename = (path, extension = "") =>
   path.split("/").reverse()[0].replace(extension, "");
-const globalComponentsContext = import.meta.glob(
-  "./components/global/**/*.riot",
+const componentsContext = import.meta.glob(
+  "./components/**/*.riot",
   { eager: true }
 );
 
 export default () => {
-  Object.entries(globalComponentsContext).map(([path, component]) => {
+  Object.entries(componentsContext).map(([path, component]) => {
     const name = basename(path, ".riot");
 
     register(name, component.default || component);

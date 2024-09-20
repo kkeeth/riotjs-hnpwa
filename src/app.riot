@@ -1,8 +1,8 @@
 <app>
   <div class="container">
-    <router base={ base }>
-      <h1> Riotjs + ViteJS </h1>
-      <AppHeader />
+    <router>
+      <h1> Riotjs Hacker News PWA </h1>
+      <app-header navItems={state.pages} />
       <div if={state.showNotFound} class="row">
         <div class="column column-60">
           <not-found />
@@ -10,8 +10,8 @@
       </div>
       <div if={!state.showNotFound} class="row">
         <div class="column column-60">
-          <route each={page in state.pages} path={page.path}>
-            <main is={page.componentName}/>
+          <route each={page in state.pages} path={page.link}>
+            <main is={state.activePage.componentName} />
           </route>
         </div>
       </div>
@@ -21,21 +21,12 @@
     import { Router, Route, route, toRegexp, match } from '@riotjs/route'
     import lazy from '@riotjs/lazy'
     import Loader from './components/includes/loader/loader.riot'
-    import NotFound from './pages/not-found.riot'
     import pages from './pages'
 
     export default {
       components : {
         Router,
         Route,
-        NotFound,
-        AppHeader: lazy(Loader, () => import(
-          './app-header.riot'
-        )),
-        AppMain: lazy(Loader, () => import(
-          './app-Main.riot'
-        )),
-        base: window.location.origin,
       },
       state: {
         pages,
@@ -47,7 +38,7 @@
         this.anyRouteStream.on.value(this.onAnyRoute)
       },
       onAnyRoute(path) {
-        const activePage = pages.find(p => match(path.pathname, toRegexp(p.path)))
+        const activePage = pages.find(p => match(path.pathname, toRegexp(p.link)))
 
         this.update({
           activePage,

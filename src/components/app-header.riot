@@ -1,23 +1,10 @@
 <app-header>
-  <nav>
-    <a href="/" class="logo"><img src="src/img/logo.png" alt="logo"></a>
-    <a each={ item in navItems } href={ item.link }>{ item.name }</a>
-  </nav>
   <div class="row">
-    <nav class="menu column">
-      <a
-        each={page in state.pages}
-        class={state.activePage === page ? 'active' : '' }
-        href={page.path}>
-        {page.label}
-      </a>
+    <nav>
+      <a href="/" class="logo"><img src="src/img/logo.png" alt="logo"></a>
+      <a each={ item in props.navItems } href={ item.link }>{ item.label }</a>
     </nav>
   </div>
-  <script>
-    import navItems from './pages'
-    export default {
-    }
-  </script>
 
   <style>
     :host {
