@@ -2,7 +2,7 @@
   <div class="container">
     <router>
       <h1> Riotjs Hacker News PWA </h1>
-      <app-header navItems={state.pages} />
+      <app-header navItems={state.pages} activePage={state.activePage} />
       <div if={state.showNotFound} class="row">
         <div class="column column-60">
           <not-found />
@@ -31,7 +31,7 @@
       state: {
         pages,
         showNotFound: false,
-        activePage: null
+        activePage: { link: "/", label: "Top", componentName: "top" }
       },
       onBeforeMount({ isServer }) {
         this.anyRouteStream = route('(.*)')
