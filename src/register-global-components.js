@@ -2,10 +2,9 @@ import { register } from "riot";
 
 const basename = (path, extension = "") =>
   path.split("/").reverse()[0].replace(extension, "");
-const componentsContext = import.meta.glob(
-  "./components/**/*.riot",
-  { eager: true }
-);
+const componentsContext = import.meta.glob("./components/**/*.riot", {
+  eager: true,
+});
 
 export default () => {
   Object.entries(componentsContext).map(([path, component]) => {

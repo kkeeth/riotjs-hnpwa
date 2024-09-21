@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "format": "biome format src --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "riot": "^9.4.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.2",
     "@riotjs/compiler": "^9.2.0",
     "@riotjs/hot-reload": "^9.0.1",
     "@riotjs/lazy": "^9.0.0",
