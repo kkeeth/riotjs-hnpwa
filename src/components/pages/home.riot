@@ -1,0 +1,31 @@
+<home>
+  <pagination />
+  <lists posts={ posts } />
+
+
+  <script>
+    import lazy from "@riotjs/lazy";
+    import Pagination from "../includes/pagination.riot";
+    import Loader from "../includes/loader.riot";
+    import { fetchData } from "../../utils/api";
+
+    export default {
+      components: {
+        Pagination,
+        Loader,
+        Lists: lazy(Loader, () => import(
+          '../includes/lists.riot'
+        )),
+      },
+      onBeforeMount(props) {
+        this.state = {
+          posts: fetchData({ type: props.type, page: parseInt(props.page) || 1 }),
+          type: props.type,
+          page: parseInt(props.page) || 1 ,
+          hasMore: true,
+        };
+        this.start = ((this.state.page - 1) * 30) + 1;
+      }
+    }
+  </script>
+</home>

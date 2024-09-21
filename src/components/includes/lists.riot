@@ -1,0 +1,17 @@
+<lists>
+  <div>
+    <item each={ item in Object.keys(items) } key={ parseInt(item, 10) + 1 } item={ item } />;
+  </div>
+
+  <script>
+    import Item from "./item.riot";
+    import Pagination from "./pagination.riot";
+
+    export default {
+      components: {
+        Item,
+        Pagination
+      },
+    }
+  </script>
+</lists>

@@ -1,0 +1,44 @@
+<pagination>
+  <a if={ page > 1 } href={ `/${type}/${(page - 1)}` } class="pagination-link">
+    &lt; Prev
+  </a>
+  <a if={ page <= 1 } class="pagination-link disabled">&lt; Prev</a>
+  <a if={ hasMore } href={ `/${type}/${(page + 1)}` } class="pagination-link">
+    Next &gt;
+  </a>
+  <a if={ !hasMore } class="pagination-link disabled">Next &gt;</a>
+
+  <style>
+  .main {
+    margin-top: 100px;
+    background: #fff;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .pagination {
+    position: fixed;
+    top: 49px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    z-index: 5;
+  }
+
+  .pagination-link {
+    padding: 8px 12px;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .disabled {
+    color: #ccc;
+  }
+
+  .no-overflow {
+    overflow: hidden;
+  }
+  </style>
+</pagination>

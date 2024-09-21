@@ -1,0 +1,72 @@
+<item>
+  <li class="news-item">
+    <span class="score">{ this.item.score }</span>
+    <span class="title">
+      <template if={ this.item.url }>
+        <a :href="this.item.url" target="_blank" rel="noopener">{ this.item.title }</a>
+        <span class="host"> ({ this.item.url | host })</span>
+      </template>
+      <template if={ !this.item.url }>
+        <a href={`/item/${ this.item.id }`}>{ this.item.title }</a>
+      </template>
+    </span>
+    <br>
+    <span class="meta">
+      <span if={ this.item.type !== 'job' } class="by">
+        by <a href={ `/user/${this.item.by}` }>{ this.item.by }</a>
+      </span>
+      <span class="time">
+        { this.item.time | timeAgo } ago
+      </span>
+      <span if={ this.item.type !== 'job' } class="comments-link">
+        | <a href={ `/item/${ this.item.id }` }>{ this.item.descendants } comments</a>
+      </span>
+    </span>
+    <span class="label" if={ this.item.type !== 'story' }>{ this.item.type }</span>
+  </li>
+
+  <script>
+    import { timeAgo } from '../../utils/filters'
+
+    export default {
+      onBeforeMount(props) {
+        this.item = props.item || {}
+      }
+    }
+  </script>
+
+  <style>
+    .news-item {
+      background-color: #fff;
+      padding: 20px 30px 20px 80px;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      line-height: 20px;
+    }
+    .news-item .score {
+      color: #f60;
+      font-size: 1.1em;
+      font-weight: 700;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 80px;
+      text-align: center;
+      margin-top: -10px;
+    }
+    .news-item .meta,
+    .news-item .host {
+      font-size: 0.85em;
+      color: #828282;
+    }
+    .news-item .meta a,
+    .news-item .host a {
+      color: #828282;
+      text-decoration: underline;
+    }
+    .news-item .meta a:hover,
+    .news-item .host a:hover {
+      color: #f60;
+    }
+  </style>
+</item>
